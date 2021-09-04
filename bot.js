@@ -46,7 +46,7 @@ function welcome(ctx) {
 bot.hears('👥 BIZ HAQIMIZDA 👥', ctx => {
    
     // replyWithDocument - document javob qaytarish, source: faylni ozi, filename fayl nomi
-    ctx.replyWithDocument({ source: buffer, filename: './university_info.docx' })
+    ctx.replyWithDocument({ source: buffer, filename: './Kantrakt_narxlari.docx' })
 
     ctx.reply('Bu erda biz haqimizda koproq malumotga ega bolishingiz mumkin🙂')
 
@@ -56,7 +56,7 @@ bot.hears('👥 BIZ HAQIMIZDA 👥', ctx => {
 
 bot.hears('📕 Magistratura va bakalavr 📕', ctx => {
     // replyWithDocument - document javob qaytarish, source: faylni ozi, filename fayl nomi
-    ctx.replyWithDocument({ source: buffer, filename: './Стоимость контракта.docx' })
+    ctx.replyWithDocument({ source: buffer, filename: './university_info.docx' })
 
     ctx.reply('Shartnoma narxini ushbu fayldan bilib olishingiz mumkin🙂')
 
@@ -81,6 +81,7 @@ bot.hears('🏢 BIZNING MANZIL 🏢', ctx => {
 })
 
 bot.hears('📱 Administrator 📱', ctx => {
+    ctx.reply('@Ieu_vakolatxonasi01')
     ctx.reply('Administratorga savollar: +998900064443')
 
 })
