@@ -3,6 +3,8 @@ const { Telegraf } = require('telegraf');
 const fs = require('fs')
 // bu word faylimizning buffer sifatida saqlanib olinishi keyinchalik jo'natish un
 const buffer = fs.readFileSync('./university_info.docx')
+// bu word faylimizning buffer sifatida saqlanib olinishi keyinchalik jo'natish un
+const buffers = fs.readFileSync('./kontrakt_info.docx')
 
 const TOKEN = '1979962335:AAEHD90r7lF0uOA0T0foQriddjnWt4r1U4k'
 
@@ -46,7 +48,7 @@ function welcome(ctx) {
 bot.hears('👥 BIZ HAQIMIZDA 👥', ctx => {
    
     // replyWithDocument - document javob qaytarish, source: faylni ozi, filename fayl nomi
-    ctx.replyWithDocument({ source: buffer, filename: './Kantrakt_narxlari.docx' })
+    ctx.replyWithDocument({ source: buffer, filename: './university_info.docx.' })
 
     ctx.reply('Bu erda biz haqimizda koproq malumotga ega bolishingiz mumkin🙂')
 
@@ -56,7 +58,7 @@ bot.hears('👥 BIZ HAQIMIZDA 👥', ctx => {
 
 bot.hears('📕 Magistratura va bakalavr 📕', ctx => {
     // replyWithDocument - document javob qaytarish, source: faylni ozi, filename fayl nomi
-    ctx.replyWithDocument({ source: buffer, filename: './university_info.docx' })
+    ctx.replyWithDocument({ source: buffers, filename: './kontrakt_info.docx' })
 
     ctx.reply('Shartnoma narxini ushbu fayldan bilib olishingiz mumkin🙂')
 
@@ -64,8 +66,8 @@ bot.hears('📕 Magistratura va bakalavr 📕', ctx => {
 
 
 bot.hears('📱BIZNING IJTIMOIY TARMOQLAR📱', ctx => {
-    ctx.reply('📲  Vebsayt : Ieu.edu.ua/uz                                                                                                                📲  Инстаграм: https://www.instagram.com/meu_uz/')
-
+    ctx.reply('📲  Websayt : Ieu.edu.ua/uz                                                                           📲 Telegram: https://t.me/xalqarouniversitet                                                                                                           📲  Instagram: https://www.instagram.com/meu_uz/')
+   
 })
 
 
